@@ -1,0 +1,184 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+/* Navbar */
+.navbar {
+    background-color: transparent; /* Ensure it overrides other styles */
+    position: fixed;/* Keeps the navbar at the top */
+    top: 0;
+    width: 100%;
+    z-index: 10;/*Ensures it's above other content */
+    padding: 3vh 10vh;
+    border-bottom: 1px solid white;
+    background-color: transparent; /* Initially transparent */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+/* Active state background color */
+.navbar.active {
+    background-color: #000; /* Change this to your desired color */
+}
+
+/* Additional styles for visibility */
+.navbar a, .navbar .logo {
+    color: #fff; /* White text for contrast on transparent background */
+    text-decoration: none;
+    font-size: 18px;
+}
+/* Hero Section */
+.hero-section {
+    background: 
+        radial-gradient(circle, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.8) 90%), 
+        url('image/bmw-pic.png') no-repeat center center/cover;
+    height: 130vh; /* Ensures the height is 130% of the viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: relative;
+    top: 0;
+    background-size: cover; /* Ensure the background image fully covers the section */
+    background-position: center; /* Center the background image */
+}
+
+/* Adjust background size for smaller screens */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 100vh; /* Adjust height for smaller screens */
+        background-size: auto 100%; /* Adjust image size for better scaling */
+    }
+}
+
+/* Further adjust for very small screens */
+@media (max-width: 480px) {
+    .hero-section {
+        background-size: auto 100%; /* Adjust image scaling for very small screens */
+    }
+}
+
+.hero-section h1 {
+    margin-bottom: 1rem;
+}
+
+.hero-section .btn-primary {
+    background-color: #0056b3;
+    border: none;
+}
+
+/* Models Section */
+.models-section {
+    background: #f8f9fa;
+}
+
+.models-section .card {
+    border: none;
+    transition: transform 0.2s ease-in-out;
+}
+
+.models-section .card:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    font-size: 14px;
+}
+.card-img-top{
+    height: 29vh;
+    object-fit: cover;
+}
+.card-icon img{
+    display: flex
+    
+}
+
+
+.card-icon{
+    display: flex;
+}
+.card-icon-top{
+    height: 10vh;
+    width: 16vh;
+    object-fit: cover;
+}
+/* Electric Section */
+.electric-section {
+    background: 
+        radial-gradient(circle, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.8) 90%), 
+        url('image/bmw-electric.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: relative;
+    top: 0;
+}
+/* Contact Section*/
+.contact-section li,a{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    padding: 0 15px; /* Add padding to prevent content from touching edges */
+    box-sizing: border-box; /* Ensures padding doesn't cause overflow */
+    width: 100%; /* Make sure it spans the full width */
+    overflow: hidden; /* Prevent content overflow */
+}
+
+.contacthead{
+    color: #fff;
+}
+header{
+    display: flex;
+    justify-content: center;
+}
+.navbar.scrolled {
+    background-color: black !important; /* Background changes to black */
+    border-bottom: 2px solid white; /* Optional: add a border for a sleek look */
+}
+@media (max-width: 772px) {
+    .navbar .navbar-toggle {
+        display: block; /* Show toggle button */
+    }
+    .navbar .nav-links {
+        display: none; /* Hide links by default */
+    }
+}
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath stroke="rgba%28255, 255, 255, 1%29" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+}
+.logo {
+    width: 50px; /* Default size for larger screens */
+}
+
+@media (max-width: 992px) { /* Tablet and below */
+    .logo {
+        width: 40px;
+    }
+}
+
+@media (max-width: 768px) { /* Mobile devices */
+    .logo {
+        width: 30px;
+    }
+}
+
+@media (max-width: 576px) { /* Smallest screens */
+    .logo {
+        width: 30px;
+    }
+}
+.caard{
+    justify-content: center;
+}
